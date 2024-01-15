@@ -1,0 +1,125 @@
+@media (max-width: 1280px) {
+    .country span {
+        line-height: calc(25 / 25);
+    }
+}
+
+@media (max-width: 1024px) {
+    .search-input {
+        width: 42%;
+    }
+    
+    .list-countries {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        margin: 0 auto 50px;
+    }
+
+    .title-toggle {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+
+    .input-region {
+        flex-direction: column;
+    }
+
+    .search-input {
+        margin-bottom: 13px;
+    }
+
+    .search-input,
+    .select-region {
+        width: 100%;
+    }
+
+    .select-region ul {
+        width: 100%;
+        transform: translate(0, 12%);
+    }
+
+    .region__title {
+        width: 100%;
+        transform: translate(0, 0);
+    }
+
+    .active.region__title::after {
+        transform: rotate(180deg);
+        right: 1.5%;
+        top: 18%;
+    }
+
+    body.dark .active.region__title::after {
+        transform: rotate(180deg);
+        right: 1.5%;
+        top: 18%;
+    }
+
+    .region__name {
+        padding: 15px 20px;
+        line-height: calc(13 / 22);
+        border-bottom: 1px solid #eee;
+    }
+
+    .region__name::before {
+        border: none;
+    }
+
+    .region__name:last-child {
+        border-bottom: none;
+    }
+
+    .list-countries {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 35px;
+    }
+
+    .country img {
+        margin-bottom: 15px;
+    }
+
+    .country h3 {
+        margin: 0 25px 18px 10px;
+    }
+
+    .country span {
+        font-size: 10px;
+        line-height: calc(10 / 18);
+        margin: 0 17px 15px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 29px;
+        line-height: calc(29 / 53);
+    }
+
+    .region__name::before {
+        width: 90%;
+        transform: translate(-.5%, 3.4vh);
+    }
+
+    .list-countries {
+        gap: 25px 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .list-countries {
+        gap: 10px 10px;
+    }
+
+    .country h3 {
+        font-size: 14px;
+    }
+
+    .country span {
+        font-size: 8px;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task_2_7</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/media.css">
+    <link rel="stylesheet" href="./style/fonts.css">
+</head>
+<body>
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
+      
+    <header>
+        <div class="container">
+            <div class="title-toggle">
+                <h1>Where in the world?</h1>
+                <input id="check" class="toggle" type="checkbox">
+                <label for="check"></label>
+            </div>
+            <div class="input-region">
+                <label class="search-input">
+                    <input class="input" type="search" placeholder="Search for a country...">
+                </label>
+                <div class="select-region">
+                    <span class="region__title">Region</span>
+                    <ul class="list-regions region__hide">
+                        <!-- Data from JS -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <ul class="list-countries">
+                <!-- Data from JS -->
+            </ul>
+        </div>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
