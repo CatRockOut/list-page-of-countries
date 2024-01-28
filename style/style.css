@@ -69,7 +69,7 @@ header h1 {
 
 .search-input:before {
     content: '';
-    background-image: url(img/search.svg);
+    background-image: url(../img/search.svg);
     width: 22px;
     height: 22px;
     right: 0;
@@ -111,7 +111,7 @@ input[type="checkbox"].toggle+label::before {
 
 input[type="checkbox"].toggle+label::after {
     content: '';
-    background-image: url(img/toggle.svg);
+    background-image: url(../img/toggle.svg);
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
@@ -130,7 +130,7 @@ input[type="checkbox"].toggle:checked+label::before {
 
 input[type="checkbox"].toggle:checked+label::after {
     content: '';
-    background-image: url(img/toggle.svg);
+    background-image: url(../img/toggle.svg);
     transform: translateX(120%);
     background-color: #2400FF;
     box-shadow: 0 1px 5px 0 #2400FF;
@@ -184,7 +184,7 @@ body.dark .region__title:hover {
 
 .region__title::after {
     content: '';
-    background-image: url(img/arrow-white.svg);
+    background-image: url(../img/arrow-white.svg);
     width: 26px;
     height: 26px;
     right: 0;
@@ -307,7 +307,7 @@ body.dark .country {
 
 body.dark .region__title::after {
     content: '';
-    background-image: url(img/arrow-dark.svg);
+    background-image: url(../img/arrow-dark.svg);
     width: 26px;
     height: 26px;
     right: 0;
