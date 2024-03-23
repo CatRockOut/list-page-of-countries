@@ -220,18 +220,6 @@ body.dark .region__title:hover {
     border-bottom-left-radius: 10px;
 }
 
-.region__name::before {
-    content: '';
-    position: absolute;
-    border-bottom: 1px solid #EEE;
-    width: 127px;
-    transform: translate(-7%, 3.4vh);
-}
-
-.region__name:last-child::before {
-    border: none;
-}
-
 .region__name span {
     font-family: 'Arial', sans-serif;
     font-size: 13px;
@@ -293,6 +281,10 @@ body.dark .input,
 body.dark .region__name {
     background-color: #242424;
     color: #fff
+}
+
+body.dark .region__name {
+    border-bottom: 1px solid #EEE;
 }
 
 body.dark .region__title:hover,
@@ -370,6 +362,7 @@ body.dark .active.region__title::after {
 }
 
 @keyframes preloader-bounce {
+
     0%,
     100% {
         transform: scale(0);

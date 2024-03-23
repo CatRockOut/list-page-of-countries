@@ -10,13 +10,23 @@ function initCountryList() {
     const regionList = document.querySelector('.list-regions');
     const countryList = document.querySelector('.list-countries');
 
+    // Function to save the selected theme in cookies:
+    function saveThemeToCookie() {
+        const theme = darkThemeBtn.checked
+            ? 'dark'
+            : 'light';
+
+        // To create cookies for 2 hours:
+        const expirationDate = new Date(Date.now() + 2 * 60 * 60 * 1000)
+
+        document.cookie = `theme=${theme}; expires=${expirationDate.toUTCString()}; path=/`;
+    }
+
     // Dark theme:
     darkThemeBtn && darkThemeBtn.addEventListener('change', () => {
         if (darkThemeBtn.checked) {
             document.body.classList.add('dark');
-        }
-
-        if (!darkThemeBtn.checked) {
+        } else {
             document.body.classList.remove('dark');
         }
 
@@ -201,26 +211,14 @@ function initCountryList() {
     // Preloader:
     window.addEventListener('load', () => {
         document.body.classList.add('loaded_hiding');
-        
+
         if (document.readyState === 'complete') {
             document.body.classList.add('loaded');
             document.body.classList.remove('loaded_hiding');
         }
     });
-    
+
     /* LIST OF ALL FUNCTIONS THAT ARE USED ABOVE */
-    // Function to save the selected theme in cookies:
-    function saveThemeToCookie() {
-        const theme = darkThemeBtn.checked
-            ? 'dark'
-            : 'light';
-
-        // To create cookies for 2 hours:
-        const expirationDate = new Date(Date.now() + 2 * 60 * 60 * 1000)
-
-        document.cookie = `theme=${theme}; expires=${expirationDate.toUTCString()}; path=/`;
-    }
-
     // Function to load the selected theme from a cookie:
     function loadThemeFromCookie() {
         const cookies = document.cookie.split(';');
