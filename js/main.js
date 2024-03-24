@@ -40,9 +40,7 @@ function initCountryList() {
         if (regionList === hiddenRegionList) {
             regionList.classList.remove('region__hide');
             regionTitle.classList.add('active');
-        }
-
-        if (regionList !== hiddenRegionList) {
+        } else {
             regionList.classList.add('region__hide');
             regionTitle.classList.remove('active');
         }
